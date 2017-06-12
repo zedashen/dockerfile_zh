@@ -1,0 +1,288 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>用法 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="chapter1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter1.html">
+            
+                <a href="chapter1.html">
+            
+                    
+                    Dockerfile参考
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="yong-fa.html">
+            
+                <a href="yong-fa.html">
+            
+                    
+                    用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >用法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7528;&#x6CD5;">&#x7528;&#x6CD5;</h1>
+<p><code>docker build</code>&#x547D;&#x4EE4;&#x4ECE;&#x4E00;&#x4E2A;<code>Dockerfile</code>&#x548C;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x6784;&#x5EFA;&#x955C;&#x50CF;&#x3002;&#x6784;&#x5EFA;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x662F;&#x6839;&#x636E;<code>PATH</code>&#x6216;&#x8005;<code>URL</code>&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p><code>PATH</code>&#x662F;&#x4F60;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x3002;<code>URL</code>&#x662F;&#x4E00;&#x4E2A;Git&#x4ED3;&#x5E93;&#x7684;&#x4F4D;&#x7F6E;&#x3002;  </p>
+<p>&#x4E0A;&#x4E0B;&#x6587;&#x4F1A;&#x88AB;&#x9012;&#x5F52;&#x7684;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x4E00;&#x4E2A;<code>PATH</code>&#x5305;&#x62EC;&#x4E86;&#x5B83;&#x7684;&#x4EFB;&#x4F55;&#x5B50;&#x76EE;&#x5F55;&#xFF0C;<code>URL</code>&#x5305;&#x62EC;&#x4E86;&#x5B83;&#x7684;&#x4ED3;&#x5E93;&#x548C;&#x5B50;&#x6A21;&#x5757;&#x3002;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4F5C;&#x4E3A;&#x4E0A;&#x4E0B;&#x6587;&#x8FDB;&#x884C;build&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>$ docker build .
+Sending build context to Docker daemon  6.51 MB
+...
+</code></pre><p>build&#x88AB;Docker daemon&#x8FD0;&#x884C;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x88AB;CLI&#x3002;build&#x5DE5;&#x4F5C;&#x7684;&#x7B2C;&#x4E00;&#x6B65;&#x5C31;&#x662F;&#x9012;&#x5F52;&#x7684;&#x53D1;&#x9001;&#x4E0A;&#x4E0B;&#x6587;&#x7ED9;daemon&#x3002;&#x5728;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4EE5;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;&#x76EE;&#x5F55;&#x4F5C;&#x4E3A;&#x4E0A;&#x4E0B;&#x6587;&#x5E76;&#x4E14;&#x4FDD;&#x5B58;&#x4F60;&#x7684;Dockerfile&#x662F;&#x6700;&#x597D;&#x7684;&#x3002;&#x4EC5;&#x4EC5;&#x6DFB;&#x52A0;&#x90A3;&#x4E9B;&#x5728;build Dockerfile&#x65F6;&#x7528;&#x5230;&#x7684;&#x6587;&#x4EF6;&#x3002;</p>
+<p><strong><code>Warning:</code></strong><code>&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x4F60;&#x7684;&#x6839;&#x76EE;&#x5F55;&#xFF0C;/&#xFF0C;&#x4F5C;&#x4E3A;PATH&#x3002;&#x56E0;&#x4E3A;&#x4ED6;&#x4F1A;&#x9020;&#x6210;&#x4F20;&#x8F93;&#x4F60;&#x6574;&#x4E2A;&#x786C;&#x76D8;&#x7684;&#x5185;&#x5BB9;&#x7ED9;Docker daemon&#x3002;</code></p>
+<p>&#x4E3A;&#x4E86;&#x4F7F;&#x7528;build&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#xFF0C;<code>Dockerfile</code>&#x901A;&#x8FC7;&#x4E00;&#x4E9B;&#x6307;&#x4EE4;&#x6765;&#x6307;&#x5B9A;&#x4ED6;&#x4EEC;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;<code>COPY</code>&#x3002;&#x4E3A;&#x4E86;&#x63D0;&#x9AD8;build&#x7684;&#x6027;&#x80FD;&#xFF0C;&#x901A;&#x8FC7;<code>.dockerignore</code>&#x6587;&#x4EF6;&#x6765;&#x628A;&#x4E00;&#x4E9B;&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;&#x4ECE;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x6392;&#x9664;&#x51FA;&#x53BB;&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x4E86;&#x89E3;&#x5982;&#x4F55;&#x7F16;&#x5199;&#x4E00;&#x4E2A;<code>.dockerignore</code>&#x6587;&#x4EF6;&#xFF0C;&#x8BF7;&#x770B;&#x8FD9;&#x4E2A;<a href="https://docs.docker.com/engine/reference/builder/#dockerignore-file" target="_blank">&#x6587;&#x6863;&#x3002;</a></p>
+<p>&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;<code>Dockerfile</code>&#x88AB;&#x79F0;&#x4F5C;<code>Dockerfile</code>&#xFF0C;&#x5B58;&#x653E;&#x5728;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x6839;&#x90E8;&#x3002;&#x4F60;&#x540C;&#x6837;&#x5728;<code>docker build</code>&#x547D;&#x4EE4;&#x4E2D;&#x4F7F;&#x7528;<code>-f</code>&#x6807;&#x8BB0;&#x53BB;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;Dockerfile&#x5728;&#x4F60;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5F53;&#x4E2D;&#x3002;</p>
+<pre><code>$ docker build -f /path/to/a/Dockerfile .
+</code></pre><p>&#x4F60;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x6784;&#x5EFA;&#x6210;&#x529F;&#x4EE5;&#x540E;&#x7684;repository&#x548C;tag&#x53BB;&#x4FDD;&#x5B58;&#x65B0;&#x955C;&#x50CF;&#xFF1A;</p>
+<pre><code>$ docker build -t shykes/myapp .
+</code></pre><p>&#x5982;&#x679C;&#x60F3;&#x8981;&#x5728;&#x6784;&#x5EFA;&#x540E;&#x6DFB;&#x52A0;&#x5230;&#x591A;&#x4E2A;repositories&#x548C;tag&#xFF0C;&#x5728;&#x4F60;&#x4F7F;&#x7528;<code>build</code>&#x547D;&#x4EE4;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F7F;&#x7528;&#x591A;&#x4E2A;<code>-t</code>&#x6807;&#x8BB0;&#xFF1A;</p>
+<pre><code>$ docker build -t shykes/myapp:1.0.2 -t shykes/myapp:latest .
+</code></pre><p>&#x5728;Docker daemon&#x8FD0;&#x884C;<code>Dockerfile</code>&#x4E2D;&#x7684;&#x6307;&#x4EE4;&#x4E4B;&#x524D;&#xFF0C;&#x4F1A;&#x521D;&#x6B65;&#x9A8C;&#x8BC1;Dockerfile&#xFF0C;&#x5982;&#x679C;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#x4F1A;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x3002;</p>
+<pre><code>$ docker build -t test/myapp .
+Sending build context to Docker daemon 2.048 kB
+Error response from daemon: Unknown instruction: RUNCMD
+</code></pre><p>Docker daemon&#x4F1A;&#x4E00;&#x6761;&#x4E00;&#x6761;&#x8FD0;&#x884C;<code>Dockerfile</code>&#x4E2D;&#x7684;&#x6307;&#x4EE4;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x5FC5;&#x8981;&#x7684;&#x8BDD;&#x4F1A;commit&#x6BCF;&#x6761;&#x6307;&#x4EE4;&#x8FD0;&#x884C;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x955C;&#x50CF;&#x3002;&#x5728;&#x6700;&#x7EC8;&#x8F93;&#x51FA;&#x65B0;&#x955C;&#x50CF;&#x7684;ID&#x4E4B;&#x524D;&#xFF0C;Docker daemon&#x4F1A;&#x81EA;&#x52A8;&#x6E05;&#x7406;&#x4F60;&#x53D1;&#x9001;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x3002;</p>
+<p>&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x6BCF;&#x6761;&#x6307;&#x4EE4;&#x8FD0;&#x884C;&#x90FD;&#x662F;&#x72EC;&#x7ACB;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x955C;&#x50CF;&#x3002;&#x56E0;&#x6B64;<code>RUN cd /tmp</code>&#x8FD9;&#x79CD;&#x7528;&#x6CD5;&#x4E0D;&#x4F1A;&#x5BF9;&#x4E0B;&#x6761;&#x6307;&#x4EE4;&#x4EA7;&#x751F;&#x4EFB;&#x4F55;&#x5F71;&#x54CD;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x53EF;&#x80FD;&#x7684;&#x8BDD;&#xFF0C;Docker&#x4F1A;&#x91CD;&#x590D;&#x7684;&#x5229;&#x7528;&#x4E2D;&#x95F4;&#x955C;&#x50CF;&#xFF08;&#x7F13;&#x5B58;&#xFF09;&#x6765;&#x52A0;&#x901F;<code>docker build</code>&#x3002;&#x8FD9;&#x90E8;&#x5206;&#x88AB;<code>Using cache</code>&#x6D88;&#x606F;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#x663E;&#x793A;&#x3002;&#xFF08;&#x5982;&#x679C;&#x60F3;&#x83B7;&#x5F97;&#x66F4;&#x591A;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x770B;<a href="https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#build-cache" target="_blank">Dockerfile&#x7684;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#x6784;&#x5EFA;&#x7F13;&#x5B58;&#x90E8;&#x5206;</a>&#xFF09;&#x3002;</p>
+<pre><code>$ docker build -t svendowideit/ambassador .
+Sending build context to Docker daemon 15.36 kB
+Step 1/4 : FROM alpine:3.2
+ ---&gt; 31f630c65071
+Step 2/4 : MAINTAINER SvenDowideit@home.org.au
+ ---&gt; Using cache
+ ---&gt; 2a1c91448f5f
+Step 3/4 : RUN apk update &amp;&amp;      apk add socat &amp;&amp;        rm -r /var/cache/
+ ---&gt; Using cache
+ ---&gt; 21ed6e7fbb73
+Step 4/4 : CMD env | grep _TCP= | (sed &apos;s/.*_PORT_\([0-9]*\)_TCP=tcp:\/\/\(.*\):\(.*\)/socat -t 100000000 TCP4-LISTEN:\1,fork,reuseaddr TCP4:\2:\3 \&amp;/&apos; &amp;&amp; echo wait) | sh
+ ---&gt; Using cache
+ ---&gt; 7ea8aef582cc
+Successfully built 7ea8aef582cc
+</code></pre><p>&#x53EA;&#x4F1A;&#x7528;&#x955C;&#x50CF;&#x7684;&#x672C;&#x5730;&#x4E0A;&#x5C42;&#x5B58;&#x50A8;&#x6765;&#x6784;&#x5EFA;&#x7F13;&#x5B58;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x8FD9;&#x4E9B;&#x955C;&#x50CF;&#x4F1A;&#x88AB;&#x539F;&#x5148;&#x7684;build&#x6240;&#x521B;&#x5EFA;&#x6216;&#x8005;&#x6574;&#x4E2A;&#x955C;&#x50CF;&#x7684;&#x4E0A;&#x5C42;&#x90FD;&#x662F;&#x901A;&#x8FC7;<code>docker load</code>&#x6240;&#x52A0;&#x8F7D;&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x955C;&#x50CF;&#x6784;&#x5EFA;&#x7F13;&#x5B58;&#x4F7F;&#x7528;<code>--cache-from</code>&#x6807;&#x8BB0;&#x3002;&#x88AB;--cache-from&#x6807;&#x8BB0;&#x7684;&#x955C;&#x50CF;&#x4E0D;&#x4F1A;&#x9700;&#x8981;&#x4E0A;&#x5C42;&#x955C;&#x50CF;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x80FD;&#x4F1A;&#x88AB;&#x5176;&#x4ED6;registries&#x6240;pull&#x3002;</p>
+<p>&#x5F53;&#x4F60;&#x5B8C;&#x6210;&#x4E86;&#x4F60;&#x7684;&#x6784;&#x5EFA;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x770B;&#x4E00;&#x4E0B;<a href="https://docs.docker.com/engine/tutorials/dockerrepos/#/contributing-to-docker-hub" target="_blank">&#x53D1;&#x5E03;&#x4E00;&#x4E2A;repository&#x5230;&#x4ED6;&#x7684;registry</a>&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="chapter1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Dockerfile参考">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"用法","level":"1.3","depth":1,"previous":{"title":"Dockerfile参考","level":"1.2","depth":1,"path":"chapter1.md","ref":"chapter1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"yong-fa.md","mtime":"2017-06-12T11:54:31.418Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-12T11:55:54.513Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
