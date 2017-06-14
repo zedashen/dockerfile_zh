@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>转义 · GitBook</title>
+        <title>LABEL · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="huan-jing-ti-dai.html" />
     
-    
-    <link rel="prev" href="jie-xi-qi-zhi-ling.html" />
+    <link rel="prev" href="cmd.html" />
     
 
     </head>
@@ -154,7 +152,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="zhuan-yi.html">
+        <li class="chapter " data-level="1.6" data-path="zhuan-yi.html">
             
                 <a href="zhuan-yi.html">
             
@@ -232,7 +230,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12" data-path="label.html">
+        <li class="chapter active" data-level="1.12" data-path="label.html">
             
                 <a href="label.html">
             
@@ -275,7 +273,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >转义</a>
+        <a href="." >LABEL</a>
     </h1>
 </div>
 
@@ -290,44 +288,31 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x8F6C;&#x4E49;">&#x8F6C;&#x4E49;</h1>
-<pre><code># escape=\ (backslash)
-</code></pre><p>&#x6216;&#x8005;</p>
-<pre><code># escape=` (backtick)
-</code></pre><p>&#x5728;<code>Dockerfile</code>&#x4E2D;<code>escape</code>&#x6307;&#x4EE4;&#x7528;&#x6765;&#x8BBE;&#x7F6E;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x7684;&#x8BDD;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;&#x662F;<code>\</code>&#x3002;</p>
-<p>&#x8F6C;&#x4E49;&#x5B57;&#x7B26;&#x88AB;&#x7528;&#x6765;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;&#x548C;&#x8F6C;&#x4E49;&#x6362;&#x884C;&#x7B26;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x5141;&#x8BB8;&#x4E00;&#x6761;<code>Dockerfile</code>&#x7684;&#x6307;&#x4EE4;&#x653E;&#x5728;&#x51E0;&#x884C;&#x91CC;&#x3002;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x65E0;&#x8BBA;&#x5728;Dockerfile&#x662F;&#x5426;&#x5305;&#x542B;&#x8F6C;&#x4E49;&#x6307;&#x4EE4;&#xFF0C;&#x5728;<code>RUN</code>&#x6307;&#x4EE4;&#x5F53;&#x4E2D;&#x8F6C;&#x4E49;&#x662F;&#x4E0D;&#x4F1A;&#x751F;&#x6548;&#x7684;&#xFF0C;&#x9664;&#x975E;&#x5728;&#x884C;&#x7684;&#x7ED3;&#x5C3E;&#x3002;</p>
-<p>&#x56E0;&#x4E3A;&#x5728;<code>Windows</code>&#x5F53;&#x4E2D;<code>\</code>&#x88AB;&#x5F53;&#x505A;&#x76EE;&#x5F55;&#x5206;&#x9694;&#x7B26;&#x5728;<code>Windows</code>&#x5F53;&#x4E2D;&#x628A;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;&#x8BBE;&#x4E3A;<code>&#x662F;&#x5F88;&#x6709;&#x7528;&#x7684;&#x3002;&#x5728;[Windows PowerShell](https://technet.microsoft.com/en-us/library/hh847755.aspx)&#x4E2D;&#x4E5F;&#x4F7F;&#x7528;</code>&#x3002;</p>
-<p>&#x8003;&#x8651;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x5728;<code>Windows</code>&#x5F53;&#x4E2D;&#x4ED6;&#x4F1A;&#x5931;&#x8D25;&#x4F46;&#x4E0D;&#x5BB9;&#x6613;&#x88AB;&#x770B;&#x51FA;&#x6765;&#x3002;&#x5728;&#x7B2C;&#x4E8C;&#x884C;&#x6700;&#x540E;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;<code>\</code>&#x4F1A;&#x88AB;&#x5F53;&#x505A;&#x65B0;&#x4E00;&#x884C;&#x7684;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x7B2C;&#x4E00;&#x4E2A;<code>\</code>&#x7684;&#x8F6C;&#x4E49;&#x76EE;&#x6807;&#x3002;&#x7C7B;&#x4F3C;&#x7684;&#xFF0C;&#x5728;&#x7B2C;&#x4E09;&#x884C;&#x672B;&#x5C3E;&#x7684;<code>\</code>&#xFF0C;&#x5047;&#x8BBE;&#x4ED6;&#x88AB;&#x5F53;&#x505A;&#x6307;&#x4EE4;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x4F46;&#x5176;&#x5B9E;&#x4ED6;&#x88AB;&#x5F53;&#x505A;&#x4E86;&#x6362;&#x884C;&#x8F6C;&#x4E49;&#x3002;&#x8FD9;&#x4E2A;dockerfile&#x7684;&#x7ED3;&#x679C;&#x5C31;&#x662F;&#x7B2C;&#x4E8C;&#x884C;&#x7684;&#x6307;&#x4EE4;&#x548C;&#x7B2C;&#x4E09;&#x884C;&#x7684;&#x6307;&#x4EE4;&#x5408;&#x8D77;&#x6765;&#x88AB;&#x5F53;&#x505A;&#x4E86;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#x3002;</p>
-<pre><code>FROM microsoft/nanoserver
-COPY testfile.txt c:\\
-RUN dir c:\
-</code></pre><p>&#x7ED3;&#x679C;</p>
-<pre><code>PS C:\John&gt; docker build -t succeeds --no-cache=true .
-Sending build context to Docker daemon 3.072 kB
-Step 1/3 : FROM microsoft/nanoserver
- ---&gt; 22738ff49c6d
-Step 2/3 : COPY testfile.txt c:\
- ---&gt; 96655de338de
-Removing intermediate container 4db9acbb1682
-Step 3/3 : RUN dir c:\
- ---&gt; Running in a2c157f842f5
- Volume in drive C has no label.
- Volume Serial Number is 7E6D-E0F7
-
- Directory of c:\
-
-10/05/2016  05:04 PM             1,894 License.txt
-10/05/2016  02:22 PM    &lt;DIR&gt;          Program Files
-10/05/2016  02:14 PM    &lt;DIR&gt;          Program Files (x86)
-10/28/2016  11:18 AM                62 testfile.txt
-10/28/2016  11:20 AM    &lt;DIR&gt;          Users
-10/28/2016  11:20 AM    &lt;DIR&gt;          Windows
-           2 File(s)          1,956 bytes
-           4 Dir(s)  21,259,096,064 bytes free
- ---&gt; 01c7f3bef04f
-Removing intermediate container a2c157f842f5
-Successfully built 01c7f3bef04f
-PS C:\John&gt;
+                                <h1 id="label">LABEL</h1>
+<pre><code>LABEL &lt;key&gt;=&lt;value&gt; &lt;key&gt;=&lt;value&gt; &lt;key&gt;=&lt;value&gt; ...
+</code></pre><p><code>LABEL</code>&#x6307;&#x4EE4;&#x6DFB;&#x52A0;&#x5143;&#x6570;&#x636E;&#x5230;&#x955C;&#x50CF;&#x5F53;&#x4E2D;&#x3002;<code>LABEL</code>&#x662F;&#x952E;&#x503C;&#x5BF9;&#x3002;&#x5982;&#x679C;&#x8981;&#x5728;<code>LABEL</code>&#x4E2D;&#x6DFB;&#x52A0;&#x7A7A;&#x683C;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;&#x5F15;&#x53F7;&#x6216;&#x8005;&#x53CD;&#x659C;&#x6760;&#xFF0C;&#x5C31;&#x50CF;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x4E00;&#x6837;&#x3002;&#x4E00;&#x4E9B;&#x7528;&#x4F8B;&#xFF1A;</p>
+<pre><code>LABEL &quot;com.example.vendor&quot;=&quot;ACME Incorporated&quot;
+LABEL com.example.label-with-value=&quot;foo&quot;
+LABEL version=&quot;1.0&quot;
+LABEL description=&quot;This text illustrates \
+that label-values can span multiple lines.&quot;
+</code></pre><p>&#x4E00;&#x4E2A;&#x955C;&#x50CF;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;label&#x3002;&#x5982;&#x679C;&#x8981;&#x6307;&#x5B9A;&#x591A;&#x4E2A;label&#x7684;&#x8BDD;&#xFF0C;Docker&#x5EFA;&#x8BAE;&#x6700;&#x597D;&#x628A;label&#x7EC4;&#x5408;&#x4E00;&#x4E0B;&#x653E;&#x5230;&#x4E00;&#x4E2A;<code>LABEL</code>&#x4E2D;&#x3002;&#x6BCF;&#x4E00;&#x4E2A;<code>LABEL</code>&#x6807;&#x8BB0;&#x90FD;&#x4F1A;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x4E00;&#x5C42;&#x3002;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x5F88;&#x591A;<code>LABEL</code>&#x7684;&#x8BDD;&#xFF0C;&#x5219;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x6548;&#x7387;&#x4F4E;&#x4E0B;&#x3002;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x53EA;&#x4EA7;&#x751F;&#x4E86;&#x4E00;&#x5C42;&#x955C;&#x50CF;&#xFF1A;</p>
+<pre><code>LABEL multi.label1=&quot;value1&quot; multi.label2=&quot;value2&quot; other=&quot;value3&quot;
+</code></pre><p>&#x540C;&#x6837;&#x4E5F;&#x53EF;&#x4EE5;&#x5199;&#x6210;&#x4E0B;&#x9762;&#x8FD9;&#x79CD;&#x5F62;&#x5F0F;&#xFF1A;</p>
+<pre><code>LABEL multi.label1=&quot;value1&quot; \
+      multi.label2=&quot;value2&quot; \
+      other=&quot;value3&quot;
+</code></pre><p>Labels&#x4F1A;&#x5411;<code>FROM</code>&#x7684;&#x955C;&#x50CF;&#x6DFB;&#x52A0;<code>LABEL</code>s&#xFF0C;&#x5982;&#x679C;&#x9047;&#x5230;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x952E;&#x503C;&#x5BF9;&#xFF0C;&#x65B0;&#x7684;&#x503C;&#x4F1A;&#x8986;&#x76D6;&#x539F;&#x5148;&#x7684;&#x503C;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x8981;&#x67E5;&#x770B;&#x955C;&#x50CF;&#x7684;label&#x7684;&#x8BDD;&#xFF0C;&#x7528;<code>docker inspect</code>&#x547D;&#x4EE4;&#x3002;</p>
+<pre><code>&quot;Labels&quot;: {
+    &quot;com.example.vendor&quot;: &quot;ACME Incorporated&quot;
+    &quot;com.example.label-with-value&quot;: &quot;foo&quot;,
+    &quot;version&quot;: &quot;1.0&quot;,
+    &quot;description&quot;: &quot;This text illustrates that label-values can span multiple lines.&quot;,
+    &quot;multi.label1&quot;: &quot;value1&quot;,
+    &quot;multi.label2&quot;: &quot;value2&quot;,
+    &quot;other&quot;: &quot;value3&quot;
+},
 </code></pre>
                                 
                                 </section>
@@ -355,14 +340,10 @@ PS C:\John&gt;
 
             
                 
-                <a href="jie-xi-qi-zhi-ling.html" class="navigation navigation-prev " aria-label="Previous page: 解析器指令">
+                <a href="cmd.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: CMD">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="huan-jing-ti-dai.html" class="navigation navigation-next " aria-label="Next page: 环境替代">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -371,7 +352,7 @@ PS C:\John&gt;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"转义","level":"1.6","depth":1,"next":{"title":"环境替代","level":"1.7","depth":1,"path":"huan-jing-ti-dai.md","ref":"huan-jing-ti-dai.md","articles":[]},"previous":{"title":"解析器指令","level":"1.5","depth":1,"path":"jie-xi-qi-zhi-ling.md","ref":"jie-xi-qi-zhi-ling.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"zhuan-yi.md","mtime":"2017-06-13T11:25:00.270Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-14T11:51:52.505Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"LABEL","level":"1.12","depth":1,"previous":{"title":"CMD","level":"1.11","depth":1,"path":"cmd.md","ref":"cmd.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"label.md","mtime":"2017-06-14T11:49:47.657Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-14T11:51:52.505Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
