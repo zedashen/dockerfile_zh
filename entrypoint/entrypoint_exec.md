@@ -110,6 +110,10 @@ sys	0m 0.03s
 
 >**注意** ：你可以覆盖`ENTRYPOINT` 使用`--entrypoint` ，但是这个可以设置二进制数据去执行(没有`sh -c`会被使用)。
 
+
+
 >**注意** ：*exec*形式会被解析为一个JSON数组，这意味着你必须使用双引号(")包裹单词而不是单引号(')。
+
+
 
 >**注意** ：不同于*shell*形式，*exec*形式不会唤起shell。这意味着一般的shell进程是不会发生的。例如，`ENTRYPOINT [ "echo", "$HOME" ]`不会做`$HOME`的变量替换。如果你希望使用shell那么使用*shell*形式或者直接执行一个shell，例如：`ENTRYPOINT [ "sh", "-c", "echo $HOME" ]`。当使用exec形式直接执行一个shell，就像shell表单一样，他会使用执行环境中的变量替换，而不是docker的环境变量替换。

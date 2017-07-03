@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>ENTRYPOINT · GitBook</title>
+        <title>了解CMD和ENTRYPOINT的相互作用 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="entrypoint_exec.html" />
     
-    
-    <link rel="prev" href="../copy.html" />
+    <link rel="prev" href="entrypoint_shell.html" />
     
 
     </head>
@@ -310,7 +308,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.18" data-path="entrypoint.html">
+        <li class="chapter " data-level="1.18" data-path="entrypoint.html">
             
                 <a href="entrypoint.html">
             
@@ -350,7 +348,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18.3" data-path="cmd_entrypoint.html">
+        <li class="chapter active" data-level="1.18.3" data-path="cmd_entrypoint.html">
             
                 <a href="cmd_entrypoint.html">
             
@@ -398,7 +396,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >ENTRYPOINT</a>
+        <a href=".." >了解CMD和ENTRYPOINT的相互作用</a>
     </h1>
 </div>
 
@@ -413,18 +411,49 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="entrypoint">ENTRYPOINT</h1>
-<p>ENTRYPOINT&#x6709;&#x4E24;&#x79CD;&#x5F62;&#x5F0F;&#xFF1A;</p>
-<ul>
-<li><code>ENTRYPOINT [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot;]</code> (<em>exec</em> &#x5F62;&#x5F0F;&#xFF0C;&#x63A8;&#x8350;)</li>
-<li><code>ENTRYPOINT command param1 param2</code> (<em>shell</em> &#x5F62;&#x5F0F;)</li>
-</ul>
-<p><code>ENTRYPOINT</code> &#x5141;&#x8BB8;&#x4F60;&#x914D;&#x7F6E;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x4F5C;&#x4E3A;&#x53EF;&#x6267;&#x884C;&#x7684;&#x3002;</p>
-<p>&#x4F8B;&#x5982;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x4F1A;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x7684;&#x5185;&#x5BB9;&#x542F;&#x52A8;nginx&#xFF0C;&#x76D1;&#x542C;80&#x7AEF;&#x53E3;&#xFF1A;</p>
-<p><code>docker run -i -t --rm -p 80:80 nginx</code></p>
-<p><code>docker run &lt;image&gt;</code> &#x7684;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;&#x4F1A;&#x9644;&#x52A0;&#x5230;<code>ENTRYPOINT</code> &#x7684;<em>exec</em> &#x5F62;&#x5F0F;&#x540E;&#xFF0C;&#x5E76;&#x4E14;&#x4F1A;&#x8986;&#x76D6;&#x6240;&#x7528;&#x4F7F;&#x7528;<code>CMD</code> &#x6307;&#x5B9A;&#x7684;&#x5143;&#x7D20;&#x3002;&#x8FD9;&#x5141;&#x8BB8;&#x628A;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x5230;entry point&#x3002;&#x4F8B;&#x5982;&#xFF0C;<code>docker run &lt;image&gt; -d</code> &#x4F1A;&#x4F20;&#x8F93;<code>-d</code> &#x53C2;&#x6570;&#x5230;entry point&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x8986;&#x5199;<code>ENTRYPOINT</code> &#x6307;&#x4EE4;&#x4F7F;&#x7528;<code>docker run --entrypoint</code> &#x547D;&#x4EE4;&#x3002;</p>
-<p><em>shell</em>&#x5F62;&#x5F0F;&#x4F1A;&#x4FDD;&#x8BC1;&#x4EFB;&#x4F55;<code>CMD</code>&#x6216;<code>run</code>&#x7684;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;&#x4E0D;&#x4F1A;&#x88AB;&#x4F7F;&#x7528;&#x3002;&#x4F46;&#x662F;&#x6709;&#x4E0D;&#x597D;&#x7684;&#x4E00;&#x70B9;&#xFF0C;&#x4F60;&#x7684;<code>ENTRYPOINT</code> &#x4F1A;&#x88AB;&#x4F5C;&#x4E3A;<code>/bin/sh -c</code>&#x7684;&#x5B50;&#x547D;&#x4EE4;&#xFF0C;&#x662F;&#x4E0D;&#x4F1A;&#x4F20;&#x8F93;&#x4FE1;&#x53F7;&#x7684;&#x3002;&#x8FD9;&#x4EE5;&#x4E3A;&#x7740;&#x4F60;&#x6267;&#x884C;&#x7684;&#x4E1C;&#x897F;&#x4E0D;&#x662F;<code>PID 1</code> &#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x4F1A;&#x6536;&#x5230;Unix&#x7684;&#x4FE1;&#x53F7;&#x3002;&#x56E0;&#x6B64;&#x4F60;&#x6267;&#x884C;&#x7684;&#x4E1C;&#x897F;&#x662F;&#x4E0D;&#x4F1A;&#x6536;&#x5230;<code>docker stop &lt;container&gt;</code>&#x7684;<code>SIGTERM</code> &#x4FE1;&#x53F7;&#x3002;</p>
-<p>&#x53EA;&#x6709;<code>Dockerfile</code>&#x4E2D;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;<code>ENTRYPOINT</code>&#x6307;&#x4EE4;&#x4F1A;&#x751F;&#x6548;&#x3002;</p>
+                                <h1 id="&#x4E86;&#x89E3;cmd&#x548C;entrypoint&#x7684;&#x76F8;&#x4E92;&#x4F5C;&#x7528;">&#x4E86;&#x89E3;CMD&#x548C;ENTRYPOINT&#x7684;&#x76F8;&#x4E92;&#x4F5C;&#x7528;</h1>
+<p><code>CMD</code> &#x548C;<code>ENTRYPOINT</code>&#x6307;&#x4EE4;&#x90FD;&#x5B9A;&#x4E49;&#x4E86;&#x8FD0;&#x884C;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x65F6;&#x8981;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;&#x3002;&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E9B;&#x89C4;&#x5219;&#x6765;&#x5B9A;&#x4E49;&#x4ED6;&#x4EEC;&#x5982;&#x4F55;&#x5199;&#x4F5C;&#xFF1A;</p>
+<p>&#x200B;    1.Dockerfile&#x4E2D;&#x6700;&#x5C11;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;<code>CMD</code>&#x6216;<code>ENTRYPOINT</code>&#x3002;</p>
+<p>&#x200B;    2.&#x5F53;&#x628A;&#x5BB9;&#x5668;&#x5F53;&#x505A;&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#x65F6;&#xFF0C;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;<code>ENTRYPOINT</code>&#x3002;</p>
+<p>&#x200B;    3.<code>CMD</code>&#x5E94;&#x8BE5;&#x7528;&#x6765;&#x5B9A;&#x4E49;<code>ENTRYPOINT</code>&#x6307;&#x4EE4;&#x7684;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x6216;&#x8005;&#x6267;&#x884C;&#x4E00;&#x4E2A;ad-hoc&#x5F62;&#x5F0F;&#x7684;&#x547D;&#x4EE4;&#x5728;&#x5BB9;&#x5668;&#x5F53;&#x4E2D;&#x3002;</p>
+<p>&#x200B;    4.<code>CMD</code>&#x4F1A;&#x88AB;&#x8986;&#x76D6;&#x5F53;&#x8FD0;&#x884C;&#x6709;&#x663E;&#x5F0F;&#x53C2;&#x6570;&#x7684;&#x547D;&#x4EE4;&#x65F6;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x8868;&#x683C;&#x544A;&#x8BC9;&#x4E86;&#x6211;&#x4EEC;&#x4E0D;&#x540C;&#x7684;<code>ENTRYPOINT</code>/<code>CMD</code>&#x7684;&#x7EC4;&#x5408;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>No ENTRYPOINT</th>
+<th>ENTRYPOINT exec_entry p1_entry</th>
+<th>ENTRYPOINT [&#x201C;exec_entry&#x201D;, &#x201C;p1_entry&#x201D;]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#No CMD</td>
+<td>error, not allowed</td>
+<td>/bin/sh -c exec_entry p1_entry</td>
+<td>exec_entry p1_entry</td>
+</tr>
+<tr>
+<td>#CMD [&#x201C;exec_cmd&#x201D;, &#x201C;p1_cmd&#x201D;]</td>
+<td>exec_cmd p1_cmd</td>
+<td>/bin/sh -c exec_entry p1_entry</td>
+<td>exec_entry p1_entry exec_cmd p1_cmd</td>
+</tr>
+<tr>
+<td>#CMD [&#x201C;p1_cmd&#x201D;, &#x201C;p2_cmd&#x201D;]</td>
+<td>p1_cmd p2_cmd</td>
+<td>/bin/sh -c exec_entry p1_entry</td>
+<td>exec_entry p1_entry p1_cmd p2_cmd</td>
+</tr>
+<tr>
+<td>#CMD exec_cmd p1_cmd</td>
+<td>/bin/sh -c exec_cmd p1_cmd</td>
+<td>/bin/sh -c exec_entry p1_entry</td>
+<td>exec_entry p1_entry /bin/sh -c exec_cmd p1_cmd</td>
+</tr>
+</tbody>
+</table>
 
                                 
                                 </section>
@@ -452,14 +481,10 @@
 
             
                 
-                <a href="../copy.html" class="navigation navigation-prev " aria-label="Previous page: COPY">
+                <a href="entrypoint_shell.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Shell形式的ENTRYPOINT例子">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="entrypoint_exec.html" class="navigation navigation-next " aria-label="Next page: Exec形式的ENTRYPOINT例子">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -468,7 +493,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ENTRYPOINT","level":"1.18","depth":1,"next":{"title":"Exec形式的ENTRYPOINT例子","level":"1.18.1","depth":2,"path":"entrypoint/entrypoint_exec.md","ref":"entrypoint/entrypoint_exec.md","articles":[]},"previous":{"title":"COPY","level":"1.17","depth":1,"path":"copy.md","ref":"copy.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"entrypoint/entrypoint.md","mtime":"2017-06-26T04:15:37.955Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-03T08:58:10.990Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"了解CMD和ENTRYPOINT的相互作用","level":"1.18.3","depth":2,"previous":{"title":"Shell形式的ENTRYPOINT例子","level":"1.18.2","depth":2,"path":"entrypoint/entrypoint_shell.md","ref":"entrypoint/entrypoint_shell.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"entrypoint/cmd_entrypoint.md","mtime":"2017-07-03T08:57:32.037Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-03T08:58:10.990Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
