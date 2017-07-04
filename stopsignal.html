@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>WORKDIR · GitBook</title>
+        <title>STOPSIGNAL · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="arg.html" />
     
-    
-    <link rel="prev" href="user.html" />
+    <link rel="prev" href="onbuild.html" />
     
 
     </head>
@@ -394,7 +392,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.21" data-path="workdir.html">
+        <li class="chapter " data-level="1.21" data-path="workdir.html">
             
                 <a href="workdir.html">
             
@@ -452,7 +450,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.24" data-path="stopsignal.html">
+        <li class="chapter active" data-level="1.24" data-path="stopsignal.html">
             
                 <a href="stopsignal.html">
             
@@ -495,7 +493,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >WORKDIR</a>
+        <a href="." >STOPSIGNAL</a>
     </h1>
 </div>
 
@@ -510,20 +508,9 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="workdir">WORKDIR</h1>
-<pre><code>WORKDIR /path/to/workdir
-</code></pre><p><code>WORKDIR</code>&#x6307;&#x4EE4;&#xFF0C;&#x6307;&#x5B9A;&#x4E86;<code>Dockerfile</code>&#x4E2D;&#x5728;&#x8FD9;&#x4E2A;&#x6307;&#x4EE4;&#x540E;&#x7684;&#x4EFB;&#x4F55;<code>RUN</code>&#xFF0C;<code>CMD</code>&#xFF0C;<code>ENTRYPOINT</code>&#xFF0C;<code>COPY</code>&#x548C;<code>ADD</code>&#x6307;&#x4EE4;&#x7684;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x3002;&#x5982;&#x679C;<code>WORKDIR</code>&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x4E48;&#x4ED6;&#x4F1A;&#x88AB;&#x521B;&#x5EFA;&#xFF0C;&#x5C31;&#x7B97;&#x5728;&#x540E;&#x9762;&#x7684;<code>Dockerfile</code>&#x6307;&#x4EE4;&#x4E2D;&#x4ED6;&#x6CA1;&#x6709;&#x88AB;&#x7528;&#x5230;&#x3002;</p>
-<p>&#x5728;&#x4E00;&#x4E2A;<code>Dockerfile</code>&#x5F53;&#x4E2D;&#x8FD9;&#x4E2A;&#x6307;&#x4EE4;&#x53EF;&#x4EE5;&#x88AB;&#x4F7F;&#x7528;&#x591A;&#x6B21;&#x3002;&#x5982;&#x679C;&#x88AB;&#x6307;&#x5B9A;&#x4E86;&#x4E00;&#x4E2A;&#x76F8;&#x5BF9;&#x5173;&#x7CFB;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x90A3;&#x4E48;&#x4ED6;&#x4F1A;&#x6839;&#x636E;&#x524D;&#x4E00;&#x4E2A;<code>WORKDIR</code>&#x6307;&#x4EE4;&#x7684;&#x4F4D;&#x7F6E;&#x6765;&#x786E;&#x5B9A;&#x4F4D;&#x7F6E;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
-<pre><code>WORKDIR /a
-WORKDIR b
-WORKDIR c
-RUN pwd
-</code></pre><p>&#x90A3;&#x4E48;&#x6700;&#x7EC8;<code>Dockerfile</code>&#x4E2D;<code>pwd</code>&#x547D;&#x4EE4;&#x7684;&#x8F93;&#x51FA;&#x4F1A;&#x662F;<code>/a/b/c</code>&#x3002;</p>
-<p><code>WORKDIR</code>&#x6307;&#x4EE4;&#x53EF;&#x4EE5;&#x89E3;&#x6790;&#x4E4B;&#x524D;&#x7528;<code>ENV</code>&#x8BBE;&#x7F6E;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x3002;&#x4F60;&#x4EC5;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x660E;&#x786E;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x5728;<code>Dockerfile</code>&#x5F53;&#x4E2D;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
-<pre><code>ENV DIRPATH /path
-WORKDIR $DIRPATH/$DIRNAME
-RUN pwd
-</code></pre><p>&#x90A3;&#x4E48;<code>Dockerfile</code>&#x4E2D;<code>pwd</code>&#x547D;&#x4EE4;&#x7684;&#x8F93;&#x51FA;&#x4F1A;&#x662F;<code>/path/$DIRNAME</code>&#x3002;</p>
+                                <h1 id="stopsignal">STOPSIGNAL</h1>
+<pre><code>STOPSIGNAL signal
+</code></pre><p><code>STOPSIGNAL</code>&#x6307;&#x4EE4;&#x8BBE;&#x7F6E;&#x4E86;&#x5728;&#x9000;&#x51FA;&#x65F6;&#x8981;&#x53D1;&#x9001;&#x7ED9;&#x5BB9;&#x5668;&#x7684;&#x4FE1;&#x53F7;&#x3002;&#x8FD9;&#x4E2A;&#x4FE1;&#x53F7;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x5408;&#x6CD5;&#x7684;&#x672A;&#x6CE8;&#x518C;&#x7684;&#x4FE1;&#x53F7;&#x5728;&#x7CFB;&#x7EDF;&#x5185;&#x6838;&#x8868;&#x4E2D;&#xFF0C;&#x4F8B;&#x5982;&#x4FE1;&#x53F7;9&#xFF0C;&#x6216;&#x8005;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#x540D;&#x662F;&#x6807;&#x51C6;&#x7684;&#x4FE1;&#x53F7;&#x540D;&#xFF0C;&#x4F8B;&#x5982;SIGKILL&#x3002;</p>
 
                                 
                                 </section>
@@ -551,14 +538,10 @@ RUN pwd
 
             
                 
-                <a href="user.html" class="navigation navigation-prev " aria-label="Previous page: USER">
+                <a href="onbuild.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: ONBUILD">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="arg.html" class="navigation navigation-next " aria-label="Next page: ARG">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -567,7 +550,7 @@ RUN pwd
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"WORKDIR","level":"1.21","depth":1,"next":{"title":"ARG","level":"1.22","depth":1,"path":"arg.md","ref":"arg.md","articles":[{"title":"ARG对构建缓存的影响","level":"1.22.1","depth":2,"path":"arg_impact_cache.md","ref":"arg_impact_cache.md","articles":[]}]},"previous":{"title":"USER","level":"1.20","depth":1,"path":"user.md","ref":"user.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"workdir.md","mtime":"2017-07-03T09:45:17.265Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-04T08:35:26.439Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"STOPSIGNAL","level":"1.24","depth":1,"previous":{"title":"ONBUILD","level":"1.23","depth":1,"path":"onbuild.md","ref":"onbuild.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"stopsignal.md","mtime":"2017-07-04T08:35:05.682Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-04T08:35:26.439Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
